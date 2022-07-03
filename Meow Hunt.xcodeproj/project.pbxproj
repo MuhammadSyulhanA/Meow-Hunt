@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		695F12952870325C00E90A97 /* Wipe2AVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F12942870325C00E90A97 /* Wipe2AVC.swift */; };
 		695F12972870329300E90A97 /* CleanUp2BVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F12962870329300E90A97 /* CleanUp2BVC.swift */; };
+		695F12992871B7EE00E90A97 /* MapsOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F12982871B7EE00E90A97 /* MapsOneVC.swift */; };
+		695F129C2871D8AB00E90A97 /* TutorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F129B2871D8AB00E90A97 /* TutorController.swift */; };
+		695F129E2871F04100E90A97 /* TutorCleanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F129D2871F04100E90A97 /* TutorCleanController.swift */; };
+		695F12A128720D8400E90A97 /* IntroducingOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F12A028720D8400E90A97 /* IntroducingOneVC.swift */; };
+		695F12A328720D9800E90A97 /* IntroducingTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F12A228720D9800E90A97 /* IntroducingTwoVC.swift */; };
+		695F12A528720DAF00E90A97 /* IntroducingThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F12A428720DAF00E90A97 /* IntroducingThreeVC.swift */; };
+		695F12A828720E9500E90A97 /* TutorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F12A728720E9500E90A97 /* TutorialVC.swift */; };
+		695F12AA28720EAA00E90A97 /* TutorialWrongVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F12A928720EAA00E90A97 /* TutorialWrongVC.swift */; };
 		696D3D85286B49C700DF67B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696D3D84286B49C700DF67B6 /* AppDelegate.swift */; };
 		696D3D87286B49C700DF67B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696D3D86286B49C700DF67B6 /* SceneDelegate.swift */; };
 		696D3D89286B49C700DF67B6 /* OnboardingOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696D3D88286B49C700DF67B6 /* OnboardingOneVC.swift */; };
@@ -23,6 +31,14 @@
 /* Begin PBXFileReference section */
 		695F12942870325C00E90A97 /* Wipe2AVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wipe2AVC.swift; sourceTree = "<group>"; };
 		695F12962870329300E90A97 /* CleanUp2BVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanUp2BVC.swift; sourceTree = "<group>"; };
+		695F12982871B7EE00E90A97 /* MapsOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsOneVC.swift; sourceTree = "<group>"; };
+		695F129B2871D8AB00E90A97 /* TutorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorController.swift; sourceTree = "<group>"; };
+		695F129D2871F04100E90A97 /* TutorCleanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorCleanController.swift; sourceTree = "<group>"; };
+		695F12A028720D8400E90A97 /* IntroducingOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducingOneVC.swift; sourceTree = "<group>"; };
+		695F12A228720D9800E90A97 /* IntroducingTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducingTwoVC.swift; sourceTree = "<group>"; };
+		695F12A428720DAF00E90A97 /* IntroducingThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducingThreeVC.swift; sourceTree = "<group>"; };
+		695F12A728720E9500E90A97 /* TutorialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC.swift; sourceTree = "<group>"; };
+		695F12A928720EAA00E90A97 /* TutorialWrongVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialWrongVC.swift; sourceTree = "<group>"; };
 		696D3D81286B49C700DF67B6 /* Meow Hunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meow Hunt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		696D3D84286B49C700DF67B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		696D3D86286B49C700DF67B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +63,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		695F129A2871D89700E90A97 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				695F129B2871D8AB00E90A97 /* TutorController.swift */,
+				695F129D2871F04100E90A97 /* TutorCleanController.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		695F129F28720D6700E90A97 /* Introducing */ = {
+			isa = PBXGroup;
+			children = (
+				695F12A028720D8400E90A97 /* IntroducingOneVC.swift */,
+				695F12A228720D9800E90A97 /* IntroducingTwoVC.swift */,
+				695F12A428720DAF00E90A97 /* IntroducingThreeVC.swift */,
+			);
+			path = Introducing;
+			sourceTree = "<group>";
+		};
+		695F12A628720E7B00E90A97 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				695F12A728720E9500E90A97 /* TutorialVC.swift */,
+				695F12A928720EAA00E90A97 /* TutorialWrongVC.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 		696D3D78286B49C700DF67B6 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +162,8 @@
 		696D3D9C286B4A1300DF67B6 /* Scene1 */ = {
 			isa = PBXGroup;
 			children = (
+				695F12A628720E7B00E90A97 /* Tutorial */,
+				695F129F28720D6700E90A97 /* Introducing */,
 				98C8192328702CDA00E193F9 /* SceneOneVC.swift */,
 			);
 			path = Scene1;
@@ -126,6 +172,7 @@
 		696D3D9D286B4A1D00DF67B6 /* GamePlay */ = {
 			isa = PBXGroup;
 			children = (
+				695F12982871B7EE00E90A97 /* MapsOneVC.swift */,
 			);
 			path = GamePlay;
 			sourceTree = "<group>";
@@ -133,6 +180,7 @@
 		696D3D9E286B4A3200DF67B6 /* Scene2 */ = {
 			isa = PBXGroup;
 			children = (
+				695F129A2871D89700E90A97 /* Tutorial */,
 				695F12942870325C00E90A97 /* Wipe2AVC.swift */,
 				695F12962870329300E90A97 /* CleanUp2BVC.swift */,
 			);
@@ -217,14 +265,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695F12A528720DAF00E90A97 /* IntroducingThreeVC.swift in Sources */,
 				696D3D89286B49C700DF67B6 /* OnboardingOneVC.swift in Sources */,
 				695F12972870329300E90A97 /* CleanUp2BVC.swift in Sources */,
+				695F12A828720E9500E90A97 /* TutorialVC.swift in Sources */,
 				696D3D85286B49C700DF67B6 /* AppDelegate.swift in Sources */,
+				695F12992871B7EE00E90A97 /* MapsOneVC.swift in Sources */,
+				695F12A328720D9800E90A97 /* IntroducingTwoVC.swift in Sources */,
+				695F129C2871D8AB00E90A97 /* TutorController.swift in Sources */,
 				695F12952870325C00E90A97 /* Wipe2AVC.swift in Sources */,
+				695F12A128720D8400E90A97 /* IntroducingOneVC.swift in Sources */,
+				695F12AA28720EAA00E90A97 /* TutorialWrongVC.swift in Sources */,
 				98C8192228702B5200E193F9 /* OnboardingTreeVC.swift in Sources */,
 				98C8192028702B2A00E193F9 /* OnboardingTwoVC.swift in Sources */,
 				98C8192428702CDA00E193F9 /* SceneOneVC.swift in Sources */,
 				696D3D87286B49C700DF67B6 /* SceneDelegate.swift in Sources */,
+				695F129E2871F04100E90A97 /* TutorCleanController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

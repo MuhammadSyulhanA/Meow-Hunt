@@ -102,7 +102,7 @@ class Wipe2AVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let image = UIImage(named: "s2_bg")
+        let image = UIImage(named: "s2_table")
         imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 1366, height: 1024))
         imageView.isUserInteractionEnabled = true
         imageView.image = image
@@ -165,7 +165,7 @@ class Wipe2AVC: UIViewController {
                         state = 0
                         cleanDone += 1
                         if cleanDone == 7 {
-                            navigationController?.pushViewController(CleanUp2BVC(), animated: true)
+                            navigationController?.pushViewController(TutorCleanController(), animated: true)
                         }
                     }
                 }
@@ -195,7 +195,7 @@ class Wipe2AVC: UIViewController {
                         state = 0
                         cleanDone += 1
                         if cleanDone == 7 {
-                            navigationController?.pushViewController(CleanUp2BVC(), animated: true)
+                            navigationController?.pushViewController(TutorCleanController(), animated: true)
                         }
                     }
                 }
@@ -225,7 +225,7 @@ class Wipe2AVC: UIViewController {
                         state = 0
                         cleanDone += 1
                         if cleanDone == 7 {
-                            navigationController?.pushViewController(CleanUp2BVC(), animated: true)
+                            navigationController?.pushViewController(TutorCleanController(), animated: true)
                         }
                     }
                 }
@@ -255,7 +255,7 @@ class Wipe2AVC: UIViewController {
                         state = 0
                         cleanDone += 1
                         if cleanDone == 7 {
-                            navigationController?.pushViewController(CleanUp2BVC(), animated: true)
+                            navigationController?.pushViewController(TutorCleanController(), animated: true)
                         }
                     }
                 }
@@ -285,7 +285,7 @@ class Wipe2AVC: UIViewController {
                         state = 0
                         cleanDone += 1
                         if cleanDone == 7 {
-                            navigationController?.pushViewController(CleanUp2BVC(), animated: true)
+                            navigationController?.pushViewController(TutorCleanController(), animated: true)
                         }
                     }
                 }
@@ -315,7 +315,7 @@ class Wipe2AVC: UIViewController {
                         state = 0
                         cleanDone += 1
                         if cleanDone == 7 {
-                            navigationController?.pushViewController(CleanUp2BVC(), animated: true)
+                            navigationController?.pushViewController(TutorCleanController(), animated: true)
                         }
                     }
                 }
@@ -345,7 +345,7 @@ class Wipe2AVC: UIViewController {
                         state = 0
                         cleanDone += 1
                         if cleanDone == 7 {
-                            navigationController?.pushViewController(CleanUp2BVC(), animated: true)
+                            navigationController?.pushViewController(TutorCleanController(), animated: true)
                         }
                     }
                 }

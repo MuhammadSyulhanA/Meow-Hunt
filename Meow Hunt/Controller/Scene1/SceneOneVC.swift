@@ -15,7 +15,7 @@ class SceneOneVC: UIViewController {
         let imgView = UIImageView()
         imgView.frame.origin = CGPoint(x: 0, y: 0)
         imgView.frame.size = CGSize(width: 1050, height: 1050)
-        imgView.image = UIImage(named: "background")
+        imgView.image = UIImage(named: "backgroundScene1")
         imgView.contentMode = .scaleAspectFill
         return imgView
     }()
@@ -104,7 +104,7 @@ class SceneOneVC: UIViewController {
     var imageViewSiluetBooks: UIImageView = {
         let imgView = UIImageView()
         imgView.frame.origin = CGPoint(x: 0, y: 0)
-        imgView.frame.size = CGSize(width: 155, height: 155)
+        imgView.frame.size = CGSize(width: 185, height: 185)
         imgView.image = UIImage(named: "siluetBooks")
         imgView.contentMode = .scaleAspectFill
         return imgView
@@ -113,7 +113,7 @@ class SceneOneVC: UIViewController {
     var imageViewSiluetGreenBooks: UIImageView = {
         let imgView = UIImageView()
         imgView.frame.origin = CGPoint(x: 0, y: 0)
-        imgView.frame.size = CGSize(width: 155, height: 155)
+        imgView.frame.size = CGSize(width: 185, height: 185)
         imgView.image = UIImage(named: "siluetGreenBooks")
         imgView.contentMode = .scaleAspectFill
         return imgView
@@ -122,7 +122,7 @@ class SceneOneVC: UIViewController {
     var imageViewSiluetRedBooks: UIImageView = {
         let imgView = UIImageView()
         imgView.frame.origin = CGPoint(x: 0, y: 0)
-        imgView.frame.size = CGSize(width: 155, height: 155)
+        imgView.frame.size = CGSize(width: 185, height: 185)
         imgView.image = UIImage(named: "siluetRedBooks")
         imgView.contentMode = .scaleAspectFill
         return imgView
@@ -353,6 +353,8 @@ class SceneOneVC: UIViewController {
         return imgView
     }()
     
+    var state = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -381,7 +383,7 @@ class SceneOneVC: UIViewController {
         imageViewSiluetDoll.center = CGPoint(x: view.center.x + 530 , y: view.center.y + 135)
         view.addSubview(imageViewSiluetDoll)
         
-        imageViewSiluetBooks.center = CGPoint(x: view.center.x - 603 , y: view.center.y + 0)
+        imageViewSiluetBooks.center = CGPoint(x: view.center.x - 610 , y: view.center.y - 3)
         view.addSubview(imageViewSiluetBooks)
         
         imageViewSiluetTowel.center = CGPoint(x: view.center.x - 445 , y: view.center.y + 156)
@@ -465,8 +467,17 @@ class SceneOneVC: UIViewController {
         let draggedView = gesture.view
         draggedView?.center = location
 
-        if ((draggedView!.frame.origin.x == imageViewBag.frame.origin.x) && (draggedView!.frame.origin.y == imageViewBag.frame.origin.y)){
-            imageViewBag.image = UIImage(named: "bag")
+        if gesture.state == .ended {
+            if(draggedView!.frame.intersects(imageViewSiluetBag.frame)){
+                imageViewBag.center = imageViewSiluetBag.center
+                imageViewSiluetBag.image = UIImage(named: "siluetGreenBag")
+                state += 1
+                if state == 7{
+                    navigationController?.pushViewController(TutorController(), animated: true)
+                }
+            } else {
+                imageViewSiluetBag.image = UIImage(named: "siluetRedBag")
+            }
         }
     }
     
@@ -475,8 +486,17 @@ class SceneOneVC: UIViewController {
         let draggedView = gesture.view
         draggedView?.center = location
 
-        if ((draggedView!.frame.origin.x == imageViewBall.frame.origin.x) && (draggedView!.frame.origin.y == imageViewBall.frame.origin.y)){
-            imageViewBall.image = UIImage(named: "ball")
+        if gesture.state == .ended {
+            if(draggedView!.frame.intersects(imageViewSiluetBall.frame)){
+                imageViewBall.center = imageViewSiluetBall.center
+                imageViewSiluetBall.image = UIImage(named: "siluetGreenBall")
+                state += 1
+                if state == 7{
+                    navigationController?.pushViewController(TutorController(), animated: true)
+                }
+            } else {
+                imageViewSiluetBall.image = UIImage(named: "siluetRedBall")
+            }
         }
     }
     
@@ -485,6 +505,19 @@ class SceneOneVC: UIViewController {
         let location = gesture.location(in: self.view)
         let draggedView = gesture.view
         draggedView?.center = location
+        
+        if gesture.state == .ended {
+            if(draggedView!.frame.intersects(imageViewSiluetBooks.frame)){
+                imageViewBooks1.center = imageViewSiluetBooks.center
+                imageViewSiluetBooks.image = UIImage(named: "siluetGreenBooks")
+                state += 1
+                if state == 7{
+                    navigationController?.pushViewController(TutorController(), animated: true)
+                }
+            } else {
+                imageViewSiluetBooks.image = UIImage(named: "siluetRedBooks")
+            }
+        }
     }
     
     @objc func handlerPlane(gesture: UIPanGestureRecognizer){
@@ -492,6 +525,19 @@ class SceneOneVC: UIViewController {
         let location = gesture.location(in: self.view)
         let draggedView = gesture.view
         draggedView?.center = location
+        
+        if gesture.state == .ended {
+            if(draggedView!.frame.intersects(imageViewSiluetPlane.frame)){
+                imageViewPlane.center = imageViewSiluetPlane.center
+                imageViewSiluetPlane.image = UIImage(named: "siluetGreenPlane")
+                state += 1
+                if state == 7{
+                    navigationController?.pushViewController(TutorController(), animated: true)
+                }
+            } else {
+                imageViewSiluetPlane.image = UIImage(named: "siluetRedPlane")
+            }
+        }
     }
     
     @objc func handlerRobot(gesture: UIPanGestureRecognizer){
@@ -499,6 +545,19 @@ class SceneOneVC: UIViewController {
         let location = gesture.location(in: self.view)
         let draggedView = gesture.view
         draggedView?.center = location
+        
+        if gesture.state == .ended {
+            if(draggedView!.frame.intersects(imageViewSiluetRobot.frame)){
+                imageViewRobot.center = imageViewSiluetRobot.center
+                imageViewSiluetRobot.image = UIImage(named: "siluetGreenRobot")
+                state += 1
+                if state == 7{
+                    navigationController?.pushViewController(TutorController(), animated: true)
+                }
+            } else {
+                imageViewSiluetRobot.image = UIImage(named: "siluetRedRobot")
+            }
+        }
     }
     
     @objc func handlerDoll(gesture: UIPanGestureRecognizer){
@@ -506,8 +565,17 @@ class SceneOneVC: UIViewController {
         let draggedView = gesture.view
         draggedView?.center = location
 
-        if ((draggedView!.frame.origin.x == imageViewDoll.frame.origin.x) && (draggedView!.frame.origin.y == imageViewDoll.frame.origin.y)){
-            imageViewDoll.image = UIImage(named: "doll")
+        if gesture.state == .ended {
+            if(draggedView!.frame.intersects(imageViewSiluetDoll.frame)){
+                imageViewDoll.center = imageViewSiluetDoll.center
+                imageViewSiluetDoll.image = UIImage(named: "siluetGreenDoll")
+                state += 1
+                if state == 7{
+                    navigationController?.pushViewController(TutorController(), animated: true)
+                }
+            } else {
+                imageViewSiluetDoll.image = UIImage(named: "siluetRedDoll")
+            }
         }
     }
     
@@ -516,8 +584,17 @@ class SceneOneVC: UIViewController {
         let draggedView = gesture.view
         draggedView?.center = location
 
-        if ((draggedView!.frame.origin.x == imageViewTowel2.frame.origin.x) && (draggedView!.frame.origin.y == imageViewTowel2.frame.origin.y)){
-            imageViewTowel2.image = UIImage(named: "towel2")
+        if gesture.state == .ended {
+            if(draggedView!.frame.intersects(imageViewSiluetTowel.frame)){
+                imageViewTowel2.center = imageViewSiluetTowel.center
+                imageViewSiluetTowel.image = UIImage(named: "siluetGreenTowel")
+                state += 1
+                if state == 7{
+                    navigationController?.pushViewController(TutorController(), animated: true)
+                }
+            } else {
+                imageViewSiluetTowel.image = UIImage(named: "siluetRedTowel")
+            }
         }
     }
 }

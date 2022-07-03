@@ -342,7 +342,9 @@ class OnboardingTreeVC: UIViewController {
             self.imageViewPlayButton.frame.size = CGSize(width: 150, height: 150)
         }
         imageViewHome.image = UIImage(named: "homeOpen")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+            self.navigationController?.pushViewController(MapsOneVC(), animated: false)
+        }
     }
-    
 }
 
