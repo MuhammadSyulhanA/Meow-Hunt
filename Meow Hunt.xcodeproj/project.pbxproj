@@ -23,6 +23,40 @@
 		696D3D8C286B49C700DF67B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696D3D8A286B49C700DF67B6 /* Main.storyboard */; };
 		696D3D8E286B49C900DF67B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696D3D8D286B49C900DF67B6 /* Assets.xcassets */; };
 		696D3D91286B49C900DF67B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696D3D8F286B49C900DF67B6 /* LaunchScreen.storyboard */; };
+		6973D1F0287294AC00534F69 /* MapsTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973D1EF287294AC00534F69 /* MapsTwoVC.swift */; };
+		6973D1F228729D4200534F69 /* Intro2OneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973D1F128729D4200534F69 /* Intro2OneVC.swift */; };
+		6973D1F42872A27A00534F69 /* Intro2TwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973D1F32872A27A00534F69 /* Intro2TwoVC.swift */; };
+		6973D1F62872E64A00534F69 /* SceneOneDoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973D1F52872E64A00534F69 /* SceneOneDoneVC.swift */; };
+		6973D1F82872E65F00534F69 /* SceneOneEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973D1F72872E65F00534F69 /* SceneOneEndVC.swift */; };
+		6973D1FA2872E67A00534F69 /* SceneOneTreasureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973D1F92872E67A00534F69 /* SceneOneTreasureVC.swift */; };
+		6973D1FC2872E68F00534F69 /* SceneOneTreasureEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973D1FB2872E68F00534F69 /* SceneOneTreasureEndVC.swift */; };
+		6973D1FF2872EC3D00534F69 /* WipeEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973D1FE2872EC3D00534F69 /* WipeEndVC.swift */; };
+		6973D2012872EDD200534F69 /* BridgeToCleanUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973D2002872EDD200534F69 /* BridgeToCleanUpVC.swift */; };
+		6973D2032872F00F00534F69 /* CleanTreasureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973D2022872F00F00534F69 /* CleanTreasureVC.swift */; };
+		6973D2052872F07100534F69 /* CleanUpEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973D2042872F07100534F69 /* CleanUpEndVC.swift */; };
+		6973D28528735D5400534F69 /* kamar 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D27428735D5400534F69 /* kamar 2.mp3 */; };
+		6973D28628735D5400534F69 /* scene selesai cari harta karun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D27528735D5400534F69 /* scene selesai cari harta karun.mp3 */; };
+		6973D28728735D5400534F69 /* peta ke meja belajar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D27628735D5400534F69 /* peta ke meja belajar.mp3 */; };
+		6973D28828735D5400534F69 /* onboarding 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D27728735D5400534F69 /* onboarding 2.mp3 */; };
+		6973D28928735D5400534F69 /* scene air 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D27828735D5400534F69 /* scene air 1.mp3 */; };
+		6973D28A28735D5400534F69 /* kamar 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D27928735D5400534F69 /* kamar 3.mp3 */; };
+		6973D28B28735D5400534F69 /* scene air 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D27A28735D5400534F69 /* scene air 2.mp3 */; };
+		6973D28C28735D5400534F69 /* kamar 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D27B28735D5400534F69 /* kamar 1.mp3 */; };
+		6973D28D28735D5400534F69 /* kamar 6 (selamat).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D27C28735D5400534F69 /* kamar 6 (selamat).mp3 */; };
+		6973D28E28735D5400534F69 /* sampai bertemu lagi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D27D28735D5400534F69 /* sampai bertemu lagi.mp3 */; };
+		6973D28F28735D5400534F69 /* onboarding 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D27E28735D5400534F69 /* onboarding 1.mp3 */; };
+		6973D29028735D5400534F69 /* onboarding 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D27F28735D5400534F69 /* onboarding 3.mp3 */; };
+		6973D29128735D5400534F69 /* kamar 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D28028735D5400534F69 /* kamar 4.mp3 */; };
+		6973D29228735D5400534F69 /* beresin meja terlebih dahulu biar mudah cari harta karun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D28128735D5400534F69 /* beresin meja terlebih dahulu biar mudah cari harta karun.mp3 */; };
+		6973D29328735D5400534F69 /* pertanyaan mau lanjut main ke meja belajar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D28228735D5400534F69 /* pertanyaan mau lanjut main ke meja belajar.mp3 */; };
+		6973D29428735D5400534F69 /* peta kamar tidur .mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D28328735D5400534F69 /* peta kamar tidur .mp3 */; };
+		6973D29528735D5400534F69 /* kamar 5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D28428735D5400534F69 /* kamar 5.mp3 */; };
+		6973D29828735DA800534F69 /* scene thud.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D29628735DA800534F69 /* scene thud.mp3 */; };
+		6973D29928735DA800534F69 /* backsound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D29728735DA800534F69 /* backsound2.mp3 */; };
+		6973D29B28735FC600534F69 /* Scene2DoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973D29A28735FC600534F69 /* Scene2DoneVC.swift */; };
+		6973D29D28735FF900534F69 /* Scene2EndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973D29C28735FF900534F69 /* Scene2EndVC.swift */; };
+		6973D29F287363F200534F69 /* backsound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6973D29E287363F200534F69 /* backsound3.mp3 */; };
+		69BC5B8028736C7400FEE9CE /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BC5B7F28736C7400FEE9CE /* LaunchScreenVC.swift */; };
 		98C8192028702B2A00E193F9 /* OnboardingTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C8191F28702B2A00E193F9 /* OnboardingTwoVC.swift */; };
 		98C8192228702B5200E193F9 /* OnboardingTreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C8192128702B5200E193F9 /* OnboardingTreeVC.swift */; };
 		98C8192428702CDA00E193F9 /* SceneOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C8192328702CDA00E193F9 /* SceneOneVC.swift */; };
@@ -47,6 +81,40 @@
 		696D3D8D286B49C900DF67B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		696D3D90286B49C900DF67B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		696D3D92286B49C900DF67B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6973D1EF287294AC00534F69 /* MapsTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsTwoVC.swift; sourceTree = "<group>"; };
+		6973D1F128729D4200534F69 /* Intro2OneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro2OneVC.swift; sourceTree = "<group>"; };
+		6973D1F32872A27A00534F69 /* Intro2TwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro2TwoVC.swift; sourceTree = "<group>"; };
+		6973D1F52872E64A00534F69 /* SceneOneDoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneOneDoneVC.swift; sourceTree = "<group>"; };
+		6973D1F72872E65F00534F69 /* SceneOneEndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneOneEndVC.swift; sourceTree = "<group>"; };
+		6973D1F92872E67A00534F69 /* SceneOneTreasureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneOneTreasureVC.swift; sourceTree = "<group>"; };
+		6973D1FB2872E68F00534F69 /* SceneOneTreasureEndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneOneTreasureEndVC.swift; sourceTree = "<group>"; };
+		6973D1FE2872EC3D00534F69 /* WipeEndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WipeEndVC.swift; sourceTree = "<group>"; };
+		6973D2002872EDD200534F69 /* BridgeToCleanUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeToCleanUpVC.swift; sourceTree = "<group>"; };
+		6973D2022872F00F00534F69 /* CleanTreasureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanTreasureVC.swift; sourceTree = "<group>"; };
+		6973D2042872F07100534F69 /* CleanUpEndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanUpEndVC.swift; sourceTree = "<group>"; };
+		6973D27428735D5400534F69 /* kamar 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "kamar 2.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/kamar 2.mp3"; sourceTree = "<group>"; };
+		6973D27528735D5400534F69 /* scene selesai cari harta karun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "scene selesai cari harta karun.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/scene selesai cari harta karun.mp3"; sourceTree = "<group>"; };
+		6973D27628735D5400534F69 /* peta ke meja belajar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "peta ke meja belajar.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/peta ke meja belajar.mp3"; sourceTree = "<group>"; };
+		6973D27728735D5400534F69 /* onboarding 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "onboarding 2.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/onboarding 2.mp3"; sourceTree = "<group>"; };
+		6973D27828735D5400534F69 /* scene air 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "scene air 1.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/scene air 1.mp3"; sourceTree = "<group>"; };
+		6973D27928735D5400534F69 /* kamar 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "kamar 3.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/kamar 3.mp3"; sourceTree = "<group>"; };
+		6973D27A28735D5400534F69 /* scene air 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "scene air 2.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/scene air 2.mp3"; sourceTree = "<group>"; };
+		6973D27B28735D5400534F69 /* kamar 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "kamar 1.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/kamar 1.mp3"; sourceTree = "<group>"; };
+		6973D27C28735D5400534F69 /* kamar 6 (selamat).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "kamar 6 (selamat).mp3"; path = "../../../../../../Downloads/Sound Efffect 2/kamar 6 (selamat).mp3"; sourceTree = "<group>"; };
+		6973D27D28735D5400534F69 /* sampai bertemu lagi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "sampai bertemu lagi.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/sampai bertemu lagi.mp3"; sourceTree = "<group>"; };
+		6973D27E28735D5400534F69 /* onboarding 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "onboarding 1.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/onboarding 1.mp3"; sourceTree = "<group>"; };
+		6973D27F28735D5400534F69 /* onboarding 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "onboarding 3.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/onboarding 3.mp3"; sourceTree = "<group>"; };
+		6973D28028735D5400534F69 /* kamar 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "kamar 4.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/kamar 4.mp3"; sourceTree = "<group>"; };
+		6973D28128735D5400534F69 /* beresin meja terlebih dahulu biar mudah cari harta karun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "beresin meja terlebih dahulu biar mudah cari harta karun.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/beresin meja terlebih dahulu biar mudah cari harta karun.mp3"; sourceTree = "<group>"; };
+		6973D28228735D5400534F69 /* pertanyaan mau lanjut main ke meja belajar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "pertanyaan mau lanjut main ke meja belajar.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/pertanyaan mau lanjut main ke meja belajar.mp3"; sourceTree = "<group>"; };
+		6973D28328735D5400534F69 /* peta kamar tidur .mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "peta kamar tidur .mp3"; path = "../../../../../../Downloads/Sound Efffect 2/peta kamar tidur .mp3"; sourceTree = "<group>"; };
+		6973D28428735D5400534F69 /* kamar 5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "kamar 5.mp3"; path = "../../../../../../Downloads/Sound Efffect 2/kamar 5.mp3"; sourceTree = "<group>"; };
+		6973D29628735DA800534F69 /* scene thud.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "scene thud.mp3"; path = "../../../../../../Downloads/scene thud.mp3"; sourceTree = "<group>"; };
+		6973D29728735DA800534F69 /* backsound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = backsound2.mp3; path = ../../../../../../Downloads/backsound2.mp3; sourceTree = "<group>"; };
+		6973D29A28735FC600534F69 /* Scene2DoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2DoneVC.swift; sourceTree = "<group>"; };
+		6973D29C28735FF900534F69 /* Scene2EndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2EndVC.swift; sourceTree = "<group>"; };
+		6973D29E287363F200534F69 /* backsound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = backsound3.mp3; path = ../../../../../../Downloads/backsound3.mp3; sourceTree = "<group>"; };
+		69BC5B7F28736C7400FEE9CE /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		98C8191F28702B2A00E193F9 /* OnboardingTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTwoVC.swift; sourceTree = "<group>"; };
 		98C8192128702B5200E193F9 /* OnboardingTreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTreeVC.swift; sourceTree = "<group>"; };
 		98C8192328702CDA00E193F9 /* SceneOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneOneVC.swift; sourceTree = "<group>"; };
@@ -110,6 +178,7 @@
 		696D3D83286B49C700DF67B6 /* Meow Hunt */ = {
 			isa = PBXGroup;
 			children = (
+				6973D27328735D3700534F69 /* Music */,
 				696D3D9A286B49E400DF67B6 /* View */,
 				696D3D99286B49DC00DF67B6 /* Controller */,
 				696D3D98286B49D400DF67B6 /* Model */,
@@ -132,6 +201,7 @@
 		696D3D99286B49DC00DF67B6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6973D2062873068F00534F69 /* Ending */,
 				696D3D9F286B4A3D00DF67B6 /* Scene3 */,
 				696D3D9E286B4A3200DF67B6 /* Scene2 */,
 				696D3D9D286B4A1D00DF67B6 /* GamePlay */,
@@ -155,6 +225,7 @@
 		696D3D9B286B4A0800DF67B6 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				69BC5B7F28736C7400FEE9CE /* LaunchScreenVC.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -165,6 +236,10 @@
 				695F12A628720E7B00E90A97 /* Tutorial */,
 				695F129F28720D6700E90A97 /* Introducing */,
 				98C8192328702CDA00E193F9 /* SceneOneVC.swift */,
+				6973D1F52872E64A00534F69 /* SceneOneDoneVC.swift */,
+				6973D1F72872E65F00534F69 /* SceneOneEndVC.swift */,
+				6973D1F92872E67A00534F69 /* SceneOneTreasureVC.swift */,
+				6973D1FB2872E68F00534F69 /* SceneOneTreasureEndVC.swift */,
 			);
 			path = Scene1;
 			sourceTree = "<group>";
@@ -173,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				695F12982871B7EE00E90A97 /* MapsOneVC.swift */,
+				6973D1EF287294AC00534F69 /* MapsTwoVC.swift */,
 			);
 			path = GamePlay;
 			sourceTree = "<group>";
@@ -180,6 +256,8 @@
 		696D3D9E286B4A3200DF67B6 /* Scene2 */ = {
 			isa = PBXGroup;
 			children = (
+				6973D1FD2872EC0800534F69 /* End */,
+				6973D1EE2872945B00534F69 /* Introducing */,
 				695F129A2871D89700E90A97 /* Tutorial */,
 				695F12942870325C00E90A97 /* Wipe2AVC.swift */,
 				695F12962870329300E90A97 /* CleanUp2BVC.swift */,
@@ -192,6 +270,62 @@
 			children = (
 			);
 			path = Scene3;
+			sourceTree = "<group>";
+		};
+		6973D1EE2872945B00534F69 /* Introducing */ = {
+			isa = PBXGroup;
+			children = (
+				6973D1F128729D4200534F69 /* Intro2OneVC.swift */,
+				6973D1F32872A27A00534F69 /* Intro2TwoVC.swift */,
+			);
+			path = Introducing;
+			sourceTree = "<group>";
+		};
+		6973D1FD2872EC0800534F69 /* End */ = {
+			isa = PBXGroup;
+			children = (
+				6973D1FE2872EC3D00534F69 /* WipeEndVC.swift */,
+				6973D2002872EDD200534F69 /* BridgeToCleanUpVC.swift */,
+				6973D2022872F00F00534F69 /* CleanTreasureVC.swift */,
+				6973D2042872F07100534F69 /* CleanUpEndVC.swift */,
+				6973D29A28735FC600534F69 /* Scene2DoneVC.swift */,
+				6973D29C28735FF900534F69 /* Scene2EndVC.swift */,
+			);
+			path = End;
+			sourceTree = "<group>";
+		};
+		6973D2062873068F00534F69 /* Ending */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ending;
+			sourceTree = "<group>";
+		};
+		6973D27328735D3700534F69 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				6973D29728735DA800534F69 /* backsound2.mp3 */,
+				6973D29E287363F200534F69 /* backsound3.mp3 */,
+				6973D29628735DA800534F69 /* scene thud.mp3 */,
+				6973D28128735D5400534F69 /* beresin meja terlebih dahulu biar mudah cari harta karun.mp3 */,
+				6973D27B28735D5400534F69 /* kamar 1.mp3 */,
+				6973D27428735D5400534F69 /* kamar 2.mp3 */,
+				6973D27928735D5400534F69 /* kamar 3.mp3 */,
+				6973D28028735D5400534F69 /* kamar 4.mp3 */,
+				6973D28428735D5400534F69 /* kamar 5.mp3 */,
+				6973D27C28735D5400534F69 /* kamar 6 (selamat).mp3 */,
+				6973D27E28735D5400534F69 /* onboarding 1.mp3 */,
+				6973D27728735D5400534F69 /* onboarding 2.mp3 */,
+				6973D27F28735D5400534F69 /* onboarding 3.mp3 */,
+				6973D28228735D5400534F69 /* pertanyaan mau lanjut main ke meja belajar.mp3 */,
+				6973D28328735D5400534F69 /* peta kamar tidur .mp3 */,
+				6973D27628735D5400534F69 /* peta ke meja belajar.mp3 */,
+				6973D27D28735D5400534F69 /* sampai bertemu lagi.mp3 */,
+				6973D27828735D5400534F69 /* scene air 1.mp3 */,
+				6973D27A28735D5400534F69 /* scene air 2.mp3 */,
+				6973D27528735D5400534F69 /* scene selesai cari harta karun.mp3 */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,9 +386,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6973D28928735D5400534F69 /* scene air 1.mp3 in Resources */,
+				6973D28628735D5400534F69 /* scene selesai cari harta karun.mp3 in Resources */,
+				6973D28F28735D5400534F69 /* onboarding 1.mp3 in Resources */,
+				6973D28E28735D5400534F69 /* sampai bertemu lagi.mp3 in Resources */,
+				6973D29828735DA800534F69 /* scene thud.mp3 in Resources */,
 				696D3D91286B49C900DF67B6 /* LaunchScreen.storyboard in Resources */,
 				696D3D8E286B49C900DF67B6 /* Assets.xcassets in Resources */,
+				6973D29228735D5400534F69 /* beresin meja terlebih dahulu biar mudah cari harta karun.mp3 in Resources */,
+				6973D28C28735D5400534F69 /* kamar 1.mp3 in Resources */,
+				6973D28D28735D5400534F69 /* kamar 6 (selamat).mp3 in Resources */,
+				6973D29928735DA800534F69 /* backsound2.mp3 in Resources */,
+				6973D28828735D5400534F69 /* onboarding 2.mp3 in Resources */,
+				6973D29528735D5400534F69 /* kamar 5.mp3 in Resources */,
+				6973D29128735D5400534F69 /* kamar 4.mp3 in Resources */,
 				696D3D8C286B49C700DF67B6 /* Main.storyboard in Resources */,
+				6973D28A28735D5400534F69 /* kamar 3.mp3 in Resources */,
+				6973D29028735D5400534F69 /* onboarding 3.mp3 in Resources */,
+				6973D28B28735D5400534F69 /* scene air 2.mp3 in Resources */,
+				6973D29428735D5400534F69 /* peta kamar tidur .mp3 in Resources */,
+				6973D29328735D5400534F69 /* pertanyaan mau lanjut main ke meja belajar.mp3 in Resources */,
+				6973D28728735D5400534F69 /* peta ke meja belajar.mp3 in Resources */,
+				6973D29F287363F200534F69 /* backsound3.mp3 in Resources */,
+				6973D28528735D5400534F69 /* kamar 2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,18 +420,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				695F12A528720DAF00E90A97 /* IntroducingThreeVC.swift in Sources */,
+				6973D2052872F07100534F69 /* CleanUpEndVC.swift in Sources */,
 				696D3D89286B49C700DF67B6 /* OnboardingOneVC.swift in Sources */,
 				695F12972870329300E90A97 /* CleanUp2BVC.swift in Sources */,
+				6973D29D28735FF900534F69 /* Scene2EndVC.swift in Sources */,
+				6973D1F42872A27A00534F69 /* Intro2TwoVC.swift in Sources */,
+				6973D2012872EDD200534F69 /* BridgeToCleanUpVC.swift in Sources */,
+				6973D1FC2872E68F00534F69 /* SceneOneTreasureEndVC.swift in Sources */,
+				6973D1F228729D4200534F69 /* Intro2OneVC.swift in Sources */,
+				6973D1FA2872E67A00534F69 /* SceneOneTreasureVC.swift in Sources */,
 				695F12A828720E9500E90A97 /* TutorialVC.swift in Sources */,
+				6973D1F0287294AC00534F69 /* MapsTwoVC.swift in Sources */,
 				696D3D85286B49C700DF67B6 /* AppDelegate.swift in Sources */,
 				695F12992871B7EE00E90A97 /* MapsOneVC.swift in Sources */,
+				6973D1F82872E65F00534F69 /* SceneOneEndVC.swift in Sources */,
+				6973D2032872F00F00534F69 /* CleanTreasureVC.swift in Sources */,
 				695F12A328720D9800E90A97 /* IntroducingTwoVC.swift in Sources */,
+				69BC5B8028736C7400FEE9CE /* LaunchScreenVC.swift in Sources */,
+				6973D1F62872E64A00534F69 /* SceneOneDoneVC.swift in Sources */,
 				695F129C2871D8AB00E90A97 /* TutorController.swift in Sources */,
+				6973D1FF2872EC3D00534F69 /* WipeEndVC.swift in Sources */,
 				695F12952870325C00E90A97 /* Wipe2AVC.swift in Sources */,
 				695F12A128720D8400E90A97 /* IntroducingOneVC.swift in Sources */,
 				695F12AA28720EAA00E90A97 /* TutorialWrongVC.swift in Sources */,
 				98C8192228702B5200E193F9 /* OnboardingTreeVC.swift in Sources */,
 				98C8192028702B2A00E193F9 /* OnboardingTwoVC.swift in Sources */,
+				6973D29B28735FC600534F69 /* Scene2DoneVC.swift in Sources */,
 				98C8192428702CDA00E193F9 /* SceneOneVC.swift in Sources */,
 				696D3D87286B49C700DF67B6 /* SceneDelegate.swift in Sources */,
 				695F129E2871F04100E90A97 /* TutorCleanController.swift in Sources */,

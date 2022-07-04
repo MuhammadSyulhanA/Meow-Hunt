@@ -89,13 +89,38 @@ class Wipe2AVC: UIViewController {
         return img
     }()
     
-    var state = 0
+    var stateUp = 0
+    var stateLeft = 0
+    var stateRight = 0
+    var stateTopRight = 0
+    var stateBotRight = 0
+    var stateMid = 0
+    var stateBotLeft = 0
+    
     var cleanDone = 0
     var kiriCount = 0
     var kananCount = 0
     
-    var transXTotal = 0
-    var transYTotal = 0
+    var transXTotalUp = 0
+    var transYTotalUp = 0
+    
+    var transXTotalLeft = 0
+    var transYTotalLeft = 0
+    
+    var transXTotalRight = 0
+    var transYTotalRight = 0
+    
+    var transXTotalTopRight = 0
+    var transYTotalTopRight = 0
+    
+    var transXTotalBotRight = 0
+    var transYTotalBotRight = 0
+    
+    var transXTotalMid = 0
+    var transYTotalMid = 0
+    
+    var transXTotalBotLeft = 0
+    var transYTotalBotLeft = 0
     
     var imageView: UIImageView!
 
@@ -142,210 +167,210 @@ class Wipe2AVC: UIViewController {
             draggedView?.center = location
             
             if(draggedView!.frame.intersects(waterMiddle.frame)){
-                transXTotal += abs(Int(translation.x))
-                transYTotal += abs(Int(translation.y))
+                transXTotalMid += abs(Int(translation.x))
+                transYTotalMid += abs(Int(translation.y))
                 
-                print("punya middle: ",transXTotal)
-                print("punya middle: ",transYTotal)
+                print("punya middle: ",transXTotalMid)
+                print("punya middle: ",transYTotalMid)
                 
-                if (transXTotal > 1200 && transYTotal > 1000){
-                    state += 1
-                    if state == 1 {
+                if (transXTotalMid > 1200 && transYTotalMid > 1000){
+                    stateMid += 1
+                    if stateMid == 1 {
                         waterMiddle.alpha = 0.5
-                        transXTotal = 0
-                        transYTotal = 0
-                    } else if state == 2 {
+                        transXTotalMid = 0
+                        transYTotalMid = 0
+                    } else if stateMid == 2 {
                         waterMiddle.alpha = 0.25
-                        transXTotal = 0
-                        transYTotal = 0
-                    } else if state == 3 {
+                        transXTotalMid = 0
+                        transYTotalMid = 0
+                    } else if stateMid == 3 {
                         waterMiddle.isHidden = true
-                        transXTotal = 0
-                        transYTotal = 0
-                        state = 0
+                        transXTotalMid = 0
+                        transYTotalMid = 0
+                        stateMid = 0
                         cleanDone += 1
                         if cleanDone == 7 {
-                            navigationController?.pushViewController(TutorCleanController(), animated: true)
+                            navigationController?.pushViewController(WipeEndVC(), animated: true)
                         }
                     }
                 }
             }
             
             if(draggedView!.frame.intersects(waterUp.frame)){
-                transXTotal += abs(Int(translation.x))
-                transYTotal += abs(Int(translation.y))
+                transXTotalUp += abs(Int(translation.x))
+                transYTotalUp += abs(Int(translation.y))
                 
-                print("punya up: ",transXTotal)
-                print("punya up: ",transYTotal)
+                print("punya up: ",transXTotalUp)
+                print("punya up: ",transYTotalUp)
                 
-                if (transXTotal > 700 && transYTotal > 150){
-                    state += 1
-                    if state == 1 {
+                if (transXTotalUp > 500 && transYTotalUp > 150){
+                    stateUp += 1
+                    if stateUp == 1 {
                         waterUp.alpha = 0.5
-                        transXTotal = 0
-                        transYTotal = 0
-                    } else if state == 2 {
+                        transXTotalUp = 0
+                        transYTotalUp = 0
+                    } else if stateUp == 2 {
                         waterUp.alpha = 0.25
-                        transXTotal = 0
-                        transYTotal = 0
-                    } else if state == 3 {
+                        transXTotalUp = 0
+                        transYTotalUp = 0
+                    } else if stateUp == 3 {
                         waterUp.isHidden = true
-                        transXTotal = 0
-                        transYTotal = 0
-                        state = 0
+                        transXTotalUp = 0
+                        transYTotalUp = 0
+                        stateUp = 0
                         cleanDone += 1
                         if cleanDone == 7 {
-                            navigationController?.pushViewController(TutorCleanController(), animated: true)
+                            navigationController?.pushViewController(WipeEndVC(), animated: true)
                         }
                     }
                 }
             }
             
             if(draggedView!.frame.intersects(waterRightCornerTop.frame)){
-                transXTotal += abs(Int(translation.x))
-                transYTotal += abs(Int(translation.y))
+                transXTotalTopRight += abs(Int(translation.x))
+                transYTotalTopRight += abs(Int(translation.y))
                 
-                print("punya right corner top: ",transXTotal)
-                print("punya right corner top: ",transYTotal)
+                print("punya right corner top: ",transXTotalTopRight)
+                print("punya right corner top: ",transYTotalTopRight)
                 
-                if (transXTotal > 1400 && transYTotal > 400){
-                    state += 1
-                    if state == 1 {
+                if (transXTotalTopRight > 1400 && transYTotalTopRight > 400){
+                    stateTopRight += 1
+                    if stateTopRight == 1 {
                         waterRightCornerTop.alpha = 0.5
-                        transXTotal = 0
-                        transYTotal = 0
-                    } else if state == 2 {
+                        transXTotalTopRight = 0
+                        transYTotalTopRight = 0
+                    } else if stateTopRight == 2 {
                         waterRightCornerTop.alpha = 0.25
-                        transXTotal = 0
-                        transYTotal = 0
-                    } else if state == 3 {
+                        transXTotalTopRight = 0
+                        transYTotalTopRight = 0
+                    } else if stateTopRight == 3 {
                         waterRightCornerTop.isHidden = true
-                        transXTotal = 0
-                        transYTotal = 0
-                        state = 0
+                        transXTotalTopRight = 0
+                        transYTotalTopRight = 0
+                        stateTopRight = 0
                         cleanDone += 1
                         if cleanDone == 7 {
-                            navigationController?.pushViewController(TutorCleanController(), animated: true)
+                            navigationController?.pushViewController(WipeEndVC(), animated: true)
                         }
                     }
                 }
             }
             
             if(draggedView!.frame.intersects(waterRight.frame)){
-                transXTotal += abs(Int(translation.x))
-                transYTotal += abs(Int(translation.y))
+                transXTotalRight += abs(Int(translation.x))
+                transYTotalRight += abs(Int(translation.y))
                 
-                print("punya right: ",transXTotal)
-                print("punya right: ",transYTotal)
+                print("punya right: ",transXTotalRight)
+                print("punya right: ",transYTotalRight)
                 
-                if (transXTotal > 1200 && transYTotal > 700){
-                    state += 1
-                    if state == 1 {
+                if (transXTotalRight > 1000 && transYTotalRight > 80){
+                    stateRight += 1
+                    if stateRight == 1 {
                         waterRight.alpha = 0.5
-                        transXTotal = 0
-                        transYTotal = 0
-                    } else if state == 2 {
+                        transXTotalRight = 0
+                        transYTotalRight = 0
+                    } else if stateRight == 2 {
                         waterRight.alpha = 0.25
-                        transXTotal = 0
-                        transYTotal = 0
-                    } else if state == 3 {
+                        transXTotalRight = 0
+                        transYTotalRight = 0
+                    } else if stateRight == 3 {
                         waterRight.isHidden = true
-                        transXTotal = 0
-                        transYTotal = 0
-                        state = 0
+                        transXTotalRight = 0
+                        transYTotalRight = 0
+                        stateRight = 0
                         cleanDone += 1
                         if cleanDone == 7 {
-                            navigationController?.pushViewController(TutorCleanController(), animated: true)
+                            navigationController?.pushViewController(WipeEndVC(), animated: true)
                         }
                     }
                 }
             }
             
             if(draggedView!.frame.intersects(waterRightCornerBot.frame)){
-                transXTotal += abs(Int(translation.x))
-                transYTotal += abs(Int(translation.y))
+                transXTotalBotRight += abs(Int(translation.x))
+                transYTotalBotRight += abs(Int(translation.y))
                 
-                print("punya right corner bot: ",transXTotal)
-                print("punya right corner bot: ",transYTotal)
+                print("punya right corner bot: ",transXTotalBotRight)
+                print("punya right corner bot: ",transYTotalBotRight)
                 
-                if (transXTotal > 1100 && transYTotal > 900){
-                    state += 1
-                    if state == 1 {
+                if (transXTotalBotRight > 1100 && transYTotalBotRight > 400){
+                    stateBotRight += 1
+                    if stateBotRight == 1 {
                         waterRightCornerBot.alpha = 0.5
-                        transXTotal = 0
-                        transYTotal = 0
-                    } else if state == 2 {
+                        transXTotalBotRight = 0
+                        transYTotalBotRight = 0
+                    } else if stateBotRight == 2 {
                         waterRightCornerBot.alpha = 0.25
-                        transXTotal = 0
-                        transYTotal = 0
-                    } else if state == 3 {
+                        transXTotalBotRight = 0
+                        transYTotalBotRight = 0
+                    } else if stateBotRight == 3 {
                         waterRightCornerBot.isHidden = true
-                        transXTotal = 0
-                        transYTotal = 0
-                        state = 0
+                        transXTotalBotRight = 0
+                        transYTotalBotRight = 0
+                        stateBotRight = 0
                         cleanDone += 1
                         if cleanDone == 7 {
-                            navigationController?.pushViewController(TutorCleanController(), animated: true)
+                            navigationController?.pushViewController(WipeEndVC(), animated: true)
                         }
                     }
                 }
             }
             
             if(draggedView!.frame.intersects(waterLeft.frame)){
-                transXTotal += abs(Int(translation.x))
-                transYTotal += abs(Int(translation.y))
+                transXTotalLeft += abs(Int(translation.x))
+                transYTotalLeft += abs(Int(translation.y))
                 
-                print("punya left: ",transXTotal)
-                print("punya left: ",transYTotal)
+                print("punya left: ",transXTotalLeft)
+                print("punya left: ",transYTotalLeft)
                 
-                if (transXTotal > 600 && transYTotal > 150){
-                    state += 1
-                    if state == 1 {
+                if (transXTotalLeft > 600 && transYTotalLeft > 150){
+                    stateLeft += 1
+                    if stateLeft == 1 {
                         waterLeft.alpha = 0.5
-                        transXTotal = 0
-                        transYTotal = 0
-                    } else if state == 2 {
+                        transXTotalLeft = 0
+                        transYTotalLeft = 0
+                    } else if stateLeft == 2 {
                         waterLeft.alpha = 0.25
-                        transXTotal = 0
-                        transYTotal = 0
-                    } else if state == 3 {
+                        transXTotalLeft = 0
+                        transYTotalLeft = 0
+                    } else if stateLeft == 3 {
                         waterLeft.isHidden = true
-                        transXTotal = 0
-                        transYTotal = 0
-                        state = 0
+                        transXTotalLeft = 0
+                        transYTotalLeft = 0
+                        stateLeft = 0
                         cleanDone += 1
                         if cleanDone == 7 {
-                            navigationController?.pushViewController(TutorCleanController(), animated: true)
+                            navigationController?.pushViewController(WipeEndVC(), animated: true)
                         }
                     }
                 }
             }
             
             if(draggedView!.frame.intersects(waterLeftCornerBot.frame)){
-                transXTotal += abs(Int(translation.x))
-                transYTotal += abs(Int(translation.y))
+                transXTotalBotLeft += abs(Int(translation.x))
+                transYTotalBotLeft += abs(Int(translation.y))
                 
-                print("punya left corner bot: ",transXTotal)
-                print("punya left corner bot: ",transYTotal)
+                print("punya left corner bot: ",transXTotalBotLeft)
+                print("punya left corner bot: ",transYTotalBotLeft)
                 
-                if (transXTotal > 1000 && transYTotal > 150){
-                    state += 1
-                    if state == 1 {
+                if (transXTotalBotLeft > 1000 && transYTotalBotLeft > 150){
+                    stateBotLeft += 1
+                    if stateBotLeft == 1 {
                         waterLeftCornerBot.alpha = 0.5
-                        transXTotal = 0
-                        transYTotal = 0
-                    } else if state == 2 {
+                        transXTotalBotLeft = 0
+                        transYTotalBotLeft = 0
+                    } else if stateBotLeft == 2 {
                         waterLeftCornerBot.alpha = 0.25
-                        transXTotal = 0
-                        transYTotal = 0
-                    } else if state == 3 {
+                        transXTotalBotLeft = 0
+                        transYTotalBotLeft = 0
+                    } else if stateBotLeft == 3 {
                         waterLeftCornerBot.isHidden = true
-                        transXTotal = 0
-                        transYTotal = 0
-                        state = 0
+                        transXTotalBotLeft = 0
+                        transYTotalBotLeft = 0
+                        stateBotLeft = 0
                         cleanDone += 1
                         if cleanDone == 7 {
-                            navigationController?.pushViewController(TutorCleanController(), animated: true)
+                            navigationController?.pushViewController(WipeEndVC(), animated: true)
                         }
                     }
                 }

@@ -6,8 +6,17 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MapsOneVC: UIViewController {
+    
+    // MARK: Music
+    var soundURI: URL?
+    var audioPlayer = AVAudioPlayer()
+    
+    // Multimedia
+    var soundURIBackground: URL?
+    var audioPlayerBackground = AVAudioPlayer()
     
     var imageViewBackground: UIImageView = {
         let imgView = UIImageView()
@@ -90,6 +99,7 @@ class MapsOneVC: UIViewController {
         textIntroStorytelling.center = view.center
         textIntroStorytelling.frame.origin.y = 640
         textIntroStorytelling.frame.origin.x = 685
+        playPetaKamar()
         textIntroStorytelling.setTypingIntroduction(text: "Lokasi pertama yang harus kita tuju adalah kamar tidur!")
         view.addSubview(textIntroStorytelling)
         
@@ -106,5 +116,36 @@ class MapsOneVC: UIViewController {
 
         }
 
+    }
+    
+    @objc func playSound(file: String, fileExtension: String, isLoop: Bool = false){
+        soundURI = URL(fileURLWithPath: Bundle.main.path(forResource: file, ofType: fileExtension)!)
+        do {
+            guard let uri = soundURI else {return}
+            audioPlayer = try AVAudioPlayer(contentsOf: uri)
+            audioPlayer.play()
+        } catch {
+            // couldn't load file :(
+        }
+    }
+    
+    @objc func playSoundLoop(file: String, fileExtension: String, isLoop: Bool = true){
+        soundURIBackground = URL(fileURLWithPath: Bundle.main.path(forResource: file, ofType: fileExtension)!)
+        do {
+            guard let uri = soundURIBackground else {return}
+            audioPlayerBackground = try AVAudioPlayer(contentsOf: uri)
+            audioPlayerBackground.numberOfLoops =  -1
+            audioPlayerBackground.play()
+        } catch {
+            // couldn't load file :(
+        }
+    }
+
+    @objc func playPetaKamar(){
+        self.playSound(file: "peta kamar tidur", fileExtension: "mp3")
+    }
+    
+    @objc func playGame(){
+        self.playSoundLoop(file: "backsound", fileExtension: "mp3", isLoop: true)
     }
 }

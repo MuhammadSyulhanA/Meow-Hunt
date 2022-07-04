@@ -6,8 +6,17 @@
 //
 
 import UIKit
+import AVFoundation
 
 class IntroducingTwoVC: UIViewController {
+    
+    // MARK: Music
+    var soundURI: URL?
+    var audioPlayer = AVAudioPlayer()
+    
+    // Multimedia
+    var soundURIBackground: URL?
+    var audioPlayerBackground = AVAudioPlayer()
 
     var imageViewBackground: UIImageView = {
         let imgView = UIImageView()
@@ -287,6 +296,7 @@ class IntroducingTwoVC: UIViewController {
             self.imageViewCat.center.x -= 150
         } completion: { isComplete in
             if isComplete {
+                self.playKamar2()
                 self.imageViewCat.isHidden = true
                 self.imageViewChat.isHidden = false
                 self.textIntroStorytelling.isHidden = false
@@ -297,5 +307,36 @@ class IntroducingTwoVC: UIViewController {
     
     func convertDegreesRadians(degrees:CGFloat)-> CGFloat {
         return degrees / 180.0 * CGFloat.pi
+    }
+    
+    @objc func playSound(file: String, fileExtension: String, isLoop: Bool = false){
+        soundURI = URL(fileURLWithPath: Bundle.main.path(forResource: file, ofType: fileExtension)!)
+        do {
+            guard let uri = soundURI else {return}
+            audioPlayer = try AVAudioPlayer(contentsOf: uri)
+            audioPlayer.play()
+        } catch {
+            // couldn't load file :(
+        }
+    }
+    
+    @objc func playSoundLoop(file: String, fileExtension: String, isLoop: Bool = true){
+        soundURIBackground = URL(fileURLWithPath: Bundle.main.path(forResource: file, ofType: fileExtension)!)
+        do {
+            guard let uri = soundURIBackground else {return}
+            audioPlayerBackground = try AVAudioPlayer(contentsOf: uri)
+            audioPlayerBackground.numberOfLoops =  -1
+            audioPlayerBackground.play()
+        } catch {
+            // couldn't load file :(
+        }
+    }
+
+    @objc func playKamar2(){
+        self.playSound(file: "kamar 2", fileExtension: "mp3")
+    }
+    
+    @objc func playGame(){
+        self.playSoundLoop(file: "backsound", fileExtension: "mp3", isLoop: true)
     }
 }

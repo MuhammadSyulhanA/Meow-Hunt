@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 struct Intro {
     var imageName: UIImageView!
@@ -13,6 +14,16 @@ struct Intro {
 }
 
 class IntroducingThreeVC: UIViewController {
+    
+    // MARK: Music
+    var soundURI: URL?
+    var audioPlayer = AVAudioPlayer()
+    
+    // Multimedia
+    var soundURIBackground: URL?
+    var audioPlayerBackground = AVAudioPlayer()
+    
+    private var writingTask: DispatchWorkItem?
 
     var dataIntro: [Intro] = []
     var hiddenViewIntro = UIImageView()
@@ -131,7 +142,9 @@ class IntroducingThreeVC: UIViewController {
         textIntroStorytelling.center = view.center
         textIntroStorytelling.frame.origin.y = 145
         textIntroStorytelling.frame.origin.x = 205
-        textIntroStorytelling.setTypingIntroduction(text: "Sepertinya kita harus merapikan\n\nbenda yang berserakan sebelum\n\nmencari harta karun!")
+//        textIntroStorytelling.setTypingIntroduction(text: "Sepertinya kita harus merapikan\n\nbenda yang berserakan sebelum\n\nmencari harta karun!")
+        playKamar3()
+        setTypingIntroduction(text: "Sepertinya kita harus merapikan\n\nbenda yang berserakan sebelum\n\nmencari harta karun!")
         view.addSubview(textIntroStorytelling)
         
         imageViewCat.center = CGPoint(x: view.center.x + 240 , y: view.center.y + 160)
@@ -147,6 +160,7 @@ class IntroducingThreeVC: UIViewController {
     }
     
     @objc func introducingTwoPage(sender: UITapGestureRecognizer){
+        writingTask?.cancel()
         
         imageViewSkipButton.frame.size = CGSize(width: 160, height: 160)
         UIView.animate(withDuration: 0.5){
@@ -156,9 +170,70 @@ class IntroducingThreeVC: UIViewController {
         if state < dataIntro.count{
             imageViewChat = dataIntro[state].imageName
             textIntroStorytelling.text = dataIntro[state].text
-            textIntroStorytelling.setTypingIntroduction(text: textIntroStorytelling.text!)
+            if state == 1 {
+                playKamar4()
+            } else if state == 2 {
+                playKamar5()
+            }
+            setTypingIntroduction(text: textIntroStorytelling.text!)
         } else {
             navigationController?.pushViewController(TutorialWrongVC(), animated: false)
         }
+    }
+    
+    @objc func setTypingIntroduction(text: String, characterDelay: TimeInterval = 5) {
+        self.textIntroStorytelling.text = ""
+          
+        writingTask = DispatchWorkItem { [weak self] in
+          text.forEach { char in
+            DispatchQueue.main.async {
+                self?.textIntroStorytelling.text?.append(char)
+            }
+            Thread.sleep(forTimeInterval: characterDelay/100)
+          }
+        }
+          
+        let queue: DispatchQueue = .init(label: "typespeed", qos: .userInteractive)
+        queue.asyncAfter(deadline: .now() + 0.05, execute: writingTask!)
+        
+      }
+    
+    @objc func playSound(file: String, fileExtension: String, isLoop: Bool = false){
+        soundURI = URL(fileURLWithPath: Bundle.main.path(forResource: file, ofType: fileExtension)!)
+        do {
+            guard let uri = soundURI else {return}
+            audioPlayer = try AVAudioPlayer(contentsOf: uri)
+            audioPlayer.play()
+        } catch {
+            // couldn't load file :(
+        }
+    }
+    
+    @objc func playSoundLoop(file: String, fileExtension: String, isLoop: Bool = true){
+        soundURIBackground = URL(fileURLWithPath: Bundle.main.path(forResource: file, ofType: fileExtension)!)
+        do {
+            guard let uri = soundURIBackground else {return}
+            audioPlayerBackground = try AVAudioPlayer(contentsOf: uri)
+            audioPlayerBackground.numberOfLoops =  -1
+            audioPlayerBackground.play()
+        } catch {
+            // couldn't load file :(
+        }
+    }
+
+    @objc func playKamar3(){
+        self.playSound(file: "kamar 3", fileExtension: "mp3")
+    }
+    
+    @objc func playKamar4(){
+        self.playSound(file: "kamar 4", fileExtension: "mp3")
+    }
+    
+    @objc func playKamar5(){
+        self.playSound(file: "kamar 5", fileExtension: "mp3")
+    }
+    
+    @objc func playGame(){
+        self.playSoundLoop(file: "backsound", fileExtension: "mp3", isLoop: true)
     }
 }

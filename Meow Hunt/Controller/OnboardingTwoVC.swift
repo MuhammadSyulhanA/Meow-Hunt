@@ -11,6 +11,14 @@ import AVFoundation
 
 class OnboardingTwoVC: UIViewController {
     
+    // MARK: Music
+    var soundURI: URL?
+    var audioPlayer = AVAudioPlayer()
+    
+    // Multimedia
+    var soundURIBackground: URL?
+    var audioPlayerBackground = AVAudioPlayer()
+    
     var imageViewBackground: UIImageView = {
         let imgView = UIImageView()
         imgView.frame.origin = CGPoint(x: 0, y: 0)
@@ -305,6 +313,7 @@ class OnboardingTwoVC: UIViewController {
         textIntroStorytelling.frame.origin.y = 375
         textIntroStorytelling.frame.origin.x = 305
         textIntroStorytelling.setTypingIntroduction(text: "Aku akan mengajak kamu ke rumahku dan bermain bersama!\n\nKita akan bermain mencari harta karun karena itu sangat seru.")
+        playTeksOnboard2()
         view.addSubview(textIntroStorytelling)
 
         imageViewSkipButton.center = CGPoint(x: view.center.x + 580 , y: view.center.y + 385)
@@ -348,5 +357,36 @@ class OnboardingTwoVC: UIViewController {
             self.imageViewSkipButton.frame.size = CGSize(width: 150, height: 150)
         }
         navigationController?.pushViewController(OnboardingTreeVC(), animated: false)
+    }
+    
+    @objc func playSound(file: String, fileExtension: String, isLoop: Bool = false){
+        soundURI = URL(fileURLWithPath: Bundle.main.path(forResource: file, ofType: fileExtension)!)
+        do {
+            guard let uri = soundURI else {return}
+            audioPlayer = try AVAudioPlayer(contentsOf: uri)
+            audioPlayer.play()
+        } catch {
+            // couldn't load file :(
+        }
+    }
+    
+    @objc func playSoundLoop(file: String, fileExtension: String, isLoop: Bool = true){
+        soundURIBackground = URL(fileURLWithPath: Bundle.main.path(forResource: file, ofType: fileExtension)!)
+        do {
+            guard let uri = soundURIBackground else {return}
+            audioPlayerBackground = try AVAudioPlayer(contentsOf: uri)
+            audioPlayerBackground.numberOfLoops =  -1
+            audioPlayerBackground.play()
+        } catch {
+            // couldn't load file :(
+        }
+    }
+
+    @objc func playTeksOnboard2(){
+        self.playSound(file: "onboarding 2", fileExtension: "mp3")
+    }
+    
+    @objc func playGame(){
+        self.playSoundLoop(file: "backsound", fileExtension: "mp3", isLoop: true)
     }
 }

@@ -23,7 +23,7 @@ class CleanUp2BVC: UIViewController {
             let img = UIImageView()
             img.frame.origin = CGPoint(x: 352, y: 345)
             img.frame.size = CGSize(width: 242, height: 284)
-            img.image = UIImage(named: "s2b_book")
+            img.image = UIImage(named: "s2_books")
             img.contentMode = .scaleAspectFill
             
             return img
@@ -53,7 +53,7 @@ class CleanUp2BVC: UIViewController {
             let img = UIImageView()
             img.frame.origin = CGPoint(x: 983, y: 119)
             img.frame.size = CGSize(width: 200, height: 291)
-            img.image = UIImage(named: "s2b_note")
+            img.image = UIImage(named: "s2_notes")
             img.contentMode = .scaleAspectFill
             
             return img
@@ -220,6 +220,7 @@ class CleanUp2BVC: UIViewController {
         }()
     
     var imageView: UIImageView!
+    var state = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -282,6 +283,10 @@ class CleanUp2BVC: UIViewController {
             if(draggedView!.frame.intersects(bookShad.frame)){
                 book.center = bookShad.center
                 bookShad.image = UIImage(named: "s2b_book_green")
+                state += 1
+                if state == 5 {
+                    navigationController?.pushViewController(CleanUpEndVC(), animated: false)
+                }
             } else {
                 bookShad.image = UIImage(named: "s2b_book_red")
             }
@@ -298,6 +303,10 @@ class CleanUp2BVC: UIViewController {
             if(draggedView!.frame.intersects(penShad.frame)){
                 pen.center = penShad.center
                 penShad.image = UIImage(named: "s2b_pen_green")
+                state += 1
+                if state == 5 {
+                    navigationController?.pushViewController(CleanUpEndVC(), animated: false)
+                }
             } else {
                 penShad.image = UIImage(named: "s2b_pen_red")
             }
@@ -314,6 +323,10 @@ class CleanUp2BVC: UIViewController {
             if(draggedView!.frame.intersects(pencilShad.frame)){
                 pencil.center = pencilShad.center
                 pencilShad.image = UIImage(named: "s2b_pencil_green")
+                state += 1
+                if state == 5 {
+                    navigationController?.pushViewController(CleanUpEndVC(), animated: false)
+                }
             } else {
                 pencilShad.image = UIImage(named: "s2b_pencil_red")
             }
@@ -330,6 +343,10 @@ class CleanUp2BVC: UIViewController {
             if(draggedView!.frame.intersects(noteShad.frame)){
                 note.center = noteShad.center
                 noteShad.image = UIImage(named: "s2b_note_green")
+                state += 1
+                if state == 5 {
+                    navigationController?.pushViewController(CleanUpEndVC(), animated: false)
+                }
             } else {
                 noteShad.image = UIImage(named: "s2b_note_red")
             }
@@ -346,6 +363,10 @@ class CleanUp2BVC: UIViewController {
             if(draggedView!.frame.intersects(paperShad.frame)){
                 paper.center = paperShad.center
                 paperShad.image = UIImage(named: "s2b_paper_green")
+                state += 1
+                if state == 5 {
+                    navigationController?.pushViewController(CleanUpEndVC(), animated: false)
+                }
             } else {
                 paperShad.image = UIImage(named: "s2b_paper_red")
             }

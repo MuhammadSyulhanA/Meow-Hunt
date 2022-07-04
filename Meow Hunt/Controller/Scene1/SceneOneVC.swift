@@ -473,7 +473,7 @@ class SceneOneVC: UIViewController {
                 imageViewSiluetBag.image = UIImage(named: "siluetGreenBag")
                 state += 1
                 if state == 7{
-                    navigationController?.pushViewController(TutorController(), animated: true)
+                    navigationController?.pushViewController(SceneOneEndVC(), animated: true)
                 }
             } else {
                 imageViewSiluetBag.image = UIImage(named: "siluetRedBag")
@@ -492,7 +492,7 @@ class SceneOneVC: UIViewController {
                 imageViewSiluetBall.image = UIImage(named: "siluetGreenBall")
                 state += 1
                 if state == 7{
-                    navigationController?.pushViewController(TutorController(), animated: true)
+                    navigationController?.pushViewController(SceneOneEndVC(), animated: true)
                 }
             } else {
                 imageViewSiluetBall.image = UIImage(named: "siluetRedBall")
@@ -512,7 +512,7 @@ class SceneOneVC: UIViewController {
                 imageViewSiluetBooks.image = UIImage(named: "siluetGreenBooks")
                 state += 1
                 if state == 7{
-                    navigationController?.pushViewController(TutorController(), animated: true)
+                    navigationController?.pushViewController(SceneOneEndVC(), animated: true)
                 }
             } else {
                 imageViewSiluetBooks.image = UIImage(named: "siluetRedBooks")
@@ -532,7 +532,7 @@ class SceneOneVC: UIViewController {
                 imageViewSiluetPlane.image = UIImage(named: "siluetGreenPlane")
                 state += 1
                 if state == 7{
-                    navigationController?.pushViewController(TutorController(), animated: true)
+                    navigationController?.pushViewController(SceneOneEndVC(), animated: true)
                 }
             } else {
                 imageViewSiluetPlane.image = UIImage(named: "siluetRedPlane")
@@ -552,7 +552,7 @@ class SceneOneVC: UIViewController {
                 imageViewSiluetRobot.image = UIImage(named: "siluetGreenRobot")
                 state += 1
                 if state == 7{
-                    navigationController?.pushViewController(TutorController(), animated: true)
+                    navigationController?.pushViewController(SceneOneEndVC(), animated: true)
                 }
             } else {
                 imageViewSiluetRobot.image = UIImage(named: "siluetRedRobot")
@@ -571,7 +571,7 @@ class SceneOneVC: UIViewController {
                 imageViewSiluetDoll.image = UIImage(named: "siluetGreenDoll")
                 state += 1
                 if state == 7{
-                    navigationController?.pushViewController(TutorController(), animated: true)
+                    navigationController?.pushViewController(SceneOneEndVC(), animated: true)
                 }
             } else {
                 imageViewSiluetDoll.image = UIImage(named: "siluetRedDoll")
@@ -590,7 +590,7 @@ class SceneOneVC: UIViewController {
                 imageViewSiluetTowel.image = UIImage(named: "siluetGreenTowel")
                 state += 1
                 if state == 7{
-                    navigationController?.pushViewController(TutorController(), animated: true)
+                    navigationController?.pushViewController(SceneOneEndVC(), animated: true)
                 }
             } else {
                 imageViewSiluetTowel.image = UIImage(named: "siluetRedTowel")
